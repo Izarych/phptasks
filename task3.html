@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<button id="btn1" class="button">1</button><br>
+<button id="btn2" class="button">2</button><br>
+<button id="btn3" class="button">3</button>
+
+<script>
+    $(document).ready(function() {
+        const buttons = [1, 2, 3];
+        let currentIndex = 0;
+
+        function reorderButtons() {
+            // Перемещаем первый элемент в конец массива
+            buttons.push(buttons.shift());
+
+            // Обновляем текст на кнопках согласно новому порядку
+            $(".button").each(function(index) {
+                $(this).text(buttons[index]);
+            });
+        }
+
+        $(".button").click(function() {
+            reorderButtons();
+        });
+    });
+</script>
+</body>
+</html>
