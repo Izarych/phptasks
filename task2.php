@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Парсинг bills.ru и добавление данных в БД PostgreSQL
+ */
+
 // Подключение необходимых библиотек и зависимостей
 require 'vendor/autoload.php';
 use GuzzleHttp\Client;
